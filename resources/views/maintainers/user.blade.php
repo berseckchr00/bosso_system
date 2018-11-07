@@ -7,7 +7,7 @@
 @section('sidebar')
     @parent
 
-    <p>This is appended to the master sidebar.</p>
+    <p>Este codigo fue modificado desde user.blade.php</p>
 @endsection
 
 @section('content')
