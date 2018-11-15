@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('maintainers.user');
-});
+Route::get('/', 'Auth\LoginController@showLoginForm')->middleware('guest');
+
+// Authentication Routes...
+Route::get('login', function(){return view('auth.login');})->name('login');
+
+
+Route::post('login', 'Auth\LoginController@login')->name('login');
+Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+
+
+Route::get('/home', 'HomeController@index')->name('home');
